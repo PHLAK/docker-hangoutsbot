@@ -5,23 +5,23 @@ Docker image for [Hangoutsbot](https://github.com/hangoutsbot/hangoutsbot) clien
 
 ### Running the container
 
-First create a data-only container to hold the persistent world and config data:
+First create a named data volume to hold the persistent config data:
 
-    docker create --name hangoutsbot-data phlak/hangoutsbot echo "Data-only container for Hangoutsbot"
+    docker volume create --name hangoutsbot-data
 
 **First run & authentication**
 
 The first time you run the bot you have to authenticate it manually.  To do
 this run the bot interactively and follow the instructions given:
 
-    docker run -it --rm -v /local/dir:/etc/hangoutsbot phlak/hangoutsbot
+    docker run -it --rm -v hangoutsbot-data:/etc/hangoutsbot phlak/hangoutsbot
 
 **Running the bot**
 
 Once authenticated you can use `Ctrl + C` to kill the running container and run
 a daemonized instance of the bot image:
 
-    docker run -dt -v /local/dir:/etc/hangoutsbot --name hangoutsbot phlak/hangoutsbot
+    docker run -dt -v hangoutsbot-data:/etc/hangoutsbot --name hangoutsbot phlak/hangoutsbot
 
 
 ##### Optional 'docker run' Arguments
