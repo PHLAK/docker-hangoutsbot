@@ -3,6 +3,8 @@ docker-hangoutsbot
 
 Docker image for [Hangoutsbot](https://github.com/hangoutsbot/hangoutsbot) client.
 
+[![](https://images.microbadger.com/badges/image/phlak/hangoutsbot.svg)](http://microbadger.com/#/images/phlak/hangoutsbot "Get your own image badge on microbadger.com")
+
 ### Running the container
 
 First create a named data volume to hold the persistent config data:
