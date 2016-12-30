@@ -18,7 +18,9 @@ RUN apk add --update ca-certificates gcc git python3-dev tar wget \
     && pip3 install --no-cache-dir soundcloud TwitterAPI \
     && apk del --purge gcc git tar wget && rm -rf /var/cache/apk/*
 
+# Set volumes
 VOLUME /etc/hangoutsbot
 
+# Default command
 CMD ["/opt/hangoutsbot/hangupsbot/hangupsbot.py", "--config", "/etc/hangoutsbot/config.json", \
      "--cookies", "/etc/hangoutsbot/cookies.json", "--memory", "/etc/hangoutsbot/memory.json"]
