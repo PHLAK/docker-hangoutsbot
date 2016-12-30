@@ -2,13 +2,13 @@ FROM alpine:3.5
 MAINTAINER Chris Kankiewicz <Chris@ChrisKankiewicz.com>
 
 # Hangoutsbot version
-ENV HOB_VERSION 2.7.10
+ARG HOB_VERSION=2.7.10
 
 # Create Hangoutsbot directories
 RUN mkdir -p /opt/hangoutsbot /etc/hangoutsbot
 
 # Set Hangoutsbot archive URL
-ENV TARBALL_URL https://api.github.com/repos/hangoutsbot/hangoutsbot/tarball/${HOB_VERSION}
+ARG TARBALL_URL=https://api.github.com/repos/hangoutsbot/hangoutsbot/tarball/${HOB_VERSION}
 
 # Download and extract Hangoutsbot archive and install dependencies
 RUN apk add --update ca-certificates gcc git python3-dev tar wget \
