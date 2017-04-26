@@ -2,7 +2,7 @@ FROM alpine:3.5
 MAINTAINER Chris Kankiewicz <Chris@ChrisKankiewicz.com>
 
 # Hangoutsbot version
-ARG HOB_VERSION=2.7.11
+ARG HOB_VERSION=2.8.0
 
 # Create Hangoutsbot directories
 RUN mkdir -p /opt/hangoutsbot /etc/hangoutsbot
