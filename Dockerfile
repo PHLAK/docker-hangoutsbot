@@ -28,6 +28,9 @@ USER hangoutsbot
 # Set volumes
 VOLUME /etc/hangoutsbot
 
+# Set the working dir
+WORKDIR /opt/hangoutsbot
+
 # Default command
 CMD ["/opt/hangoutsbot/hangupsbot/hangupsbot.py", "--config", "/etc/hangoutsbot/config.json", \
      "--cookies", "/etc/hangoutsbot/cookies.json", "--memory", "/etc/hangoutsbot/memory.json"]
