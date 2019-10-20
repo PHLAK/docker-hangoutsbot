@@ -1,4 +1,4 @@
-FROM alpine:3.9
+FROM alpine:3.10.2
 MAINTAINER Chris Kankiewicz <Chris@ChrisKankiewicz.com>
 
 # Hangoutsbot version
