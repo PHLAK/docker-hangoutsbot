@@ -1,5 +1,5 @@
 FROM alpine:3.10
-LABEL maintainer="Chris Kankiewicz <Chris@ChrisKankiewicz.com>""
+LABEL maintainer="Chris Kankiewicz <Chris@ChrisKankiewicz.com>"
 
 # Hangoutsbot version
 ARG HOB_VERSION=3.0.1
